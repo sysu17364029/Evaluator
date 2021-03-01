@@ -29,7 +29,8 @@ def getBoundingBoxes(directory,
     os.chdir(directory)
     #files = glob.glob("*.txt")
     #f = directory+".txt"
-    f = glob.glob("*.txt")
+    file = glob.glob("*.txt")
+    f = file[0]
     
     # Read GT detections from txt file
     # Each line of the files in the groundtruths folder represents a ground truth bounding box
