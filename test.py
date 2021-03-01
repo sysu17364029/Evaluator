@@ -87,7 +87,8 @@ def test(gtFileName,detFileName):
     return mAP_str
 
 def main():
-    test('gt','dr')
+    #test('gt','dr')
+    test('groundtruth','detection')
 
 if __name__ == '__main__':
     main()
