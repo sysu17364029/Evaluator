@@ -46,7 +46,6 @@ def getBoundingBoxes(directory,
             continue
         splitLine = line.split(" ")
         if isGT:
-            name0fImage = "0001"
             # idClass = int(splitLine[0]) #class
             idClass = (splitLine[0])  # class
             #print(idClass)
@@ -69,8 +68,8 @@ def getBoundingBoxes(directory,
                 imgSize,
                 BBType.GroundTruth,
                 format=bbFormat)
+            print(bb)
         else:
-            name0fImage = "0001"
             # idClass = int(splitLine[0]) #class
             idClass = (splitLine[0])  # class
             #print(idClass)
@@ -95,6 +94,7 @@ def getBoundingBoxes(directory,
                 BBType.Detected,
                 confidence,
                 format=bbFormat)
+            print(bb)
         allBoundingBoxes.addBoundingBox(bb)
         if idClass not in allClasses:
             allClasses.append(idClass)
