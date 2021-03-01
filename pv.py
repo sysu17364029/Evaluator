@@ -47,7 +47,7 @@ def getBoundingBoxes(directory,
         splitLine = line.split(" ")
         if isGT:
             # idClass = int(splitLine[0]) #class
-           idClass = (splitLine[0])  # class
+            idClass = (splitLine[0])  # class
             print(idClass)
             x = float(splitLine[1])
             print("x:",x)
