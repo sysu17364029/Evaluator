@@ -46,17 +46,18 @@ def getBoundingBoxes(directory,
             continue
         splitLine = line.split(" ")
         if isGT:
+            name0fImage = "0001"
             # idClass = int(splitLine[0]) #class
             idClass = (splitLine[0])  # class
-            print(idClass)
+            #print(idClass)
             x = float(splitLine[1])
-            print("x:",x)
+            #print("x:",x)
             y = float(splitLine[2])
-            print("y:",y)
+            #print("y:",y)
             w = float(splitLine[3])
-            print("w:",w)
+            #print("w:",w)
             h = float(splitLine[4])
-            print("h:",h)
+            #print("h:",h)
             bb = BoundingBox(
                 nameOfImage,
                 idClass,
@@ -69,18 +70,19 @@ def getBoundingBoxes(directory,
                 BBType.GroundTruth,
                 format=bbFormat)
         else:
+            name0fImage = "0001"
             # idClass = int(splitLine[0]) #class
             idClass = (splitLine[0])  # class
-            print(idClass)
+            #print(idClass)
             confidence = float(splitLine[1])
             x = float(splitLine[2])
-            print("x:",x)
+            #print("x:",x)
             y = float(splitLine[3])
-            print("y:",y)
+            #print("y:",y)
             w = float(splitLine[4])
-            print("w:",w)
+            #print("w:",w)
             h = float(splitLine[5])
-            print("h:",h)
+            #print("h:",h)
             bb = BoundingBox(
                 nameOfImage,
                 idClass,
