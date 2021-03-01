@@ -14,7 +14,7 @@ import pv
 def test(gtFileName,detFileName):
 
 # Get current path to set default folders
-    currentPath = os.path.dirname(os.path.abspath(__file__))
+#currentPath = os.path.dirname(os.path.abspath(__file__))
     gtFile = gtFileName
     detFile = detFileName
 
@@ -87,6 +87,7 @@ def test(gtFileName,detFileName):
     return mAP_str
 
 def main():
+    currentPath = os.path.dirname(os.path.abspath(__file__))
     #test('gt','dr')
     test(os.path.join(currentPath, 'groundtruth'),os.path.join(currentPath, 'detection'))
 
