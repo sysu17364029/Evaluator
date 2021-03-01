@@ -35,7 +35,7 @@ def test(gtFileName,detFileName):
 
     # Get detected boxes
     allBoundingBoxes, allClasses = pv.getBoundingBoxes(
-        detFile, False, detFormat, detCoordType, allBoundingBoxes, allClasses, imgSize=imgSize)
+        detFiel, False, detFormat, detCoordType, allBoundingBoxes, allClasses, imgSize=imgSize)
     allClasses.sort()
 
     evaluator = Evaluator()
@@ -51,18 +51,26 @@ def test(gtFileName,detFileName):
         showInterpolatedPrecision=False,  # Don't plot the interpolated precision curve
         savePath=None,
         showGraphic=False)
+    print(detections)
 
     # each detection is a class
     for metricsPerClass in detections:
 
         # Get metric values per each class
         cl = metricsPerClass['class']
+        print("cl:",cl)
         ap = metricsPerClass['AP']
+        print("ap:",ap)
         precision = metricsPerClass['precision']
+        print("precision:",precision)
         recall = metricsPerClass['recall']
+        print("recall:",recall)
         totalPositives = metricsPerClass['total positives']
+        print("totalPositives:",totalPositives)
         total_TP = metricsPerClass['total TP']
+        print("total_TP:",total_TP)
         total_FP = metricsPerClass['total FP']
+        print("total_FP:",total_FP)
 
         if totalPositives > 0:
             validClasses = validClasses + 1
