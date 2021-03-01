@@ -47,11 +47,16 @@ def getBoundingBoxes(directory,
         splitLine = line.split(" ")
         if isGT:
             # idClass = int(splitLine[0]) #class
-            idClass = (splitLine[0])  # class
+           idClass = (splitLine[0])  # class
+            print(idClass)
             x = float(splitLine[1])
+            print("x:",x)
             y = float(splitLine[2])
+            print("y:",y)
             w = float(splitLine[3])
+            print("w:",w)
             h = float(splitLine[4])
+            print("h:",h)
             bb = BoundingBox(
                 nameOfImage,
                 idClass,
@@ -66,11 +71,16 @@ def getBoundingBoxes(directory,
         else:
             # idClass = int(splitLine[0]) #class
             idClass = (splitLine[0])  # class
+            print(idClass)
             confidence = float(splitLine[1])
             x = float(splitLine[2])
+            print("x:",x)
             y = float(splitLine[3])
+            print("y:",y)
             w = float(splitLine[4])
+            print("w:",w)
             h = float(splitLine[5])
+            print("h:",h)
             bb = BoundingBox(
                 nameOfImage,
                 idClass,
@@ -87,4 +97,6 @@ def getBoundingBoxes(directory,
         if idClass not in allClasses:
             allClasses.append(idClass)
     fh1.close()
+    print("allBoundingBoxes:",allBoundingBoxes)
+    print("allClasses",allClasses)
     return allBoundingBoxes, allClasses
