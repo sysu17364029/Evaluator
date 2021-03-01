@@ -35,7 +35,7 @@ def test(gtFileName,detFileName):
 
     # Get detected boxes
     allBoundingBoxes, allClasses = pv.getBoundingBoxes(
-        detFiel, False, detFormat, detCoordType, allBoundingBoxes, allClasses, imgSize=imgSize)
+        detFile, False, detFormat, detCoordType, allBoundingBoxes, allClasses, imgSize=imgSize)
     allClasses.sort()
 
     evaluator = Evaluator()
