@@ -18,7 +18,7 @@ def test(gtFileName,detFileName):
     gtFile = gtFileName
     detFile = detFileName
 
-    iouThreshold = 0.0
+    iouThreshold = 0.5
 
     # Validate formats
     gtFormat = BBFormat.XYWH
